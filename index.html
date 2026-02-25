@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" />
+    <title>Food Hub</title>
+</head>
+
+<body class="px-4 md:px-17.5 md:py-3.75 overflow-x-hidden bg-[#e8f5e9]">
+
+    <nav class="w-full min-h-10 flex  justify-between items-center px-4 md:px-0">
+
+        <div class="font-bold text-[#2e7d32] text-lg">
+            Food Hub
+        </div>
+
+        <ol class="hidden md:flex gap-6 font-medium">
+            <li><a class="transition hover:text-[#2e7d32]" href="#">Home</a></li>
+            <li><a class="transition hover:text-[#2e7d32]" href="#">Menu</a></li>
+            <li><a class="transition hover:text-[#2e7d32]" href="#">Service</a></li>
+            <li><a class="transition hover:text-[#2e7d32]" href="#">About us</a></li>
+            <li><a class="transition hover:text-[#2e7d32]" href="#">Contacts</a></li>
+        </ol>
+
+        <div class="flex items-center gap-4">
+
+            <div id="cartt" class="relative flex items-center cursor-pointer">
+    <i class="fa-solid fa-bag-shopping text-2xl"></i>
+    <sub id="cartadded" class="absolute -bottom-1 -right-1 h-3 w-3 rounded-full   "></sub>
+</div>
+
+
+            <button class="bg-[#2e7d32] transition text-white font-bold rounded-lg px-4 py-1">
+                Sign in
+            </button>
+
+            <div id="menu" class="md:hidden cursor-pointer px-3 py-1 bg-[#2e7d32] rounded">
+                ☰
+            </div>
+
+        </div>
+    </nav>
+
+    <div id="sidebar"
+        class="fixed top-0 -right-full w-62.5 h-screen bg-[#2e7d32] z-20 w-[400px] transition-all duration-500 flex flex-col">
+
+        <div class="h-15 flex justify-between items-center px-4 border-b">
+            <p class="font-bold text-[#2e7d32]">Food Hub</p>
+            <button id="close" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-400">
+                X
+            </button>
+        </div>
+
+        <ol class="flex flex-col gap-3 mt-4 px-4">
+            <li><a class="block py-2 bg-white hover:bg-[#a6efac] text-center rounded" href="#">Home</a></li>
+            <li><a class="block py-2 bg-white hover:bg-[#a6efac] text-center rounded" href="#">Menu</a></li>
+            <li><a class="block py-2 bg-white hover:bg-[#a6efac] text-center rounded" href="#">Service</a></li>
+            <li><a class="block py-2 bg-white hover:bg-[#a6efac] text-center rounded" href="#">About us</a></li>
+            <li><a class="block py-2 bg-white hover:bg-[#a6efac] text-center rounded" href="#">Contacts</a></li>
+        </ol>
+    </div>
+
+    <div class="flex flex-wrap justify-evenly h-screen sm:h-auto py-4 items-center">
+
+        <div class="space-y-4">
+            <h2 class="text-5xl font-bold">
+                Enjoy Your <br> Delicious <span class="text-[#2e7d32]">Food</span>
+            </h2>
+
+            <p>
+                We will fill your tummy with delicious <br> food with fast delivery
+            </p>
+
+            <div class="flex justify-between">
+                <button class="bg-[#2e7d32] text-white font-bold rounded px-2.5 py-1">
+                    Order now
+                </button>
+                <p class="p-1 bg-[#a6efac] rounded"><i class="fa-brands fa-x-twitter"></i></p>
+                <p class="p-1 bg-[#a6efac] rounded"><i class="fa-brands fa-instagram"></i></p>
+                <p class="p-1 bg-[#a6efac] rounded"><i class="fa-brands fa-facebook-f"></i></p>
+                <p class="p-1 bg-[#a6efac] rounded"><i class="fa-brands fa-google-plus-g"></i></p>
+            </div>
+        </div>
+
+        <div class="w-full max-w-87.5 lg:max-w-112.5">
+            <img src="images/delivery-boy.png" class="w-full h-auto object-contain">
+        </div>
+    </div>
+
+
+
+
+
+    <div class="p-2 space-y-1.5 w-full">
+
+        <div class="flex justify-center font-bold text-3xl">
+            <h3>How Does it Work?</h3>
+        </div>
+
+        <div class="flex flex-wrap justify-around gap-4">
+
+            <div class="space-y-1.5 p-1.5 max-w-75 flex flex-col items-center">
+                <div class="w-25"><img src="images/easy-to-order.png"></div>
+                <p class="text-2xl font-bold">Easy To Order</p>
+                <p class="text-xs text-gray-500">you only need a few steps in ordering food</p>
+            </div>
+
+            <div class="space-y-1.5 p-1.5 max-w-75 flex flex-col items-center">
+                <div class="w-25"><img src="images/fast-delivery.png"></div>
+                <p class="text-2xl font-bold">Fast Delivery</p>
+                <p class="text-xs text-gray-500">Delivery that is always even faster</p>
+            </div>
+
+            <div class="space-y-1.5 p-1.5 max-w-75 flex flex-col items-center">
+                <div class="w-25"><img src="images/best-quality.png"></div>
+                <p class="text-2xl font-bold">Best Quality</p>
+                <p class="text-xs text-gray-500">Not only fast for us in quality is also number one</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+<!-- this is for food menu -->
+
+
+    <div id="menuContainer" class="grid grid-cols-1 sm:grid-cols-3  lg:grid-cols-4  justify-center items-center place-items-center  gap-4 mt-8">
+    </div>
+
+
+  <!-- this is review  -->
+
+    <div class="flex flex-wrap justify-around items-center p-3 my-3">
+
+        <div class="w-[350px] object-contain">
+            <img src="images/delivery-boy-with-phone.png" alt="">
+        </div>
+
+        <div class="flex flex-col h-[350px] justify-center space-y-7 w-[350px] sm:w-[500px]">
+            <div class="font-bold">
+                <p class="text-[#2e7d32]">Our Reviews</p>
+                <p class="text-3xl">What They Say?</p>
+            </div>
+
+            <div class="h-[200px]  w-full relative overflow-hidden">
+                <div class="h-full flex-col slide w-full absolute flex px-2.5">
+                    <div class="flex space-x-2">
+                        <div class="h-[50px] rounded-[50%] aspect-square object-cover">
+                            <img src="images/profile1.jpeg" class="h-[100%] rounded-[50%]" alt="">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p class="font-bold">Robin wardhan</p>
+                            <div class="flex gap-1 h-[100%] items-center text-yellow-400 text-[7px]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium
+                        voluptatum nostrum, mollitia similique inventore deserunt velit deleniti est tempora.</div>
+                </div>
+
+                <div class="h-full flex-col slide w-full absolute flex px-2.5">
+                    <div class="flex space-x-2">
+                        <div class="h-[50px] rounded-[50%] aspect-square object-cover">
+                            <img src="images/profile2.jpeg" class="h-[100%] rounded-[50%]" alt="">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p class="font-bold">Robin wardhan</p>
+                            <div class="flex gap-1 h-[100%] items-center text-yellow-400 text-[7px]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id sint
+                        tempora provident maxime ab accusantium incidunt voluptatem facere libero.</div>
+                </div>
+
+                <div class="h-full flex-col slide w-full absolute flex px-2.5">
+                    <div class="flex space-x-2">
+                        <div class="h-[50px] rounded-[50%] aspect-square object-cover">
+                            <img src="images/profile3.jpeg" class="h-[100%] rounded-[50%]" alt="">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p class="font-bold">Robin wardhan</p>
+                            <div class="flex gap-1 h-[100%] items-center text-yellow-400 text-[7px]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus sunt,
+                        consectetur maiores error eum ex impedit tenetur non dolorem. Expedita.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Ad section -->
+    <div class="flex flex-wrap py-3.5 w-[100%] justify-around items-center rounded-2xl bg-white ">
+        <div class="md:w-[350px] w-[200px]  flex justify-end items-center  object-cover">
+            <img class="sm:w-auto " src="images/mobile-app.png" alt="">
+        </div>
+
+
+        <div class="w-[250px] sm:w-[50%]  flex flex-col space-y-9">
+            <div>
+                <p class="text-[#2e7d32] font-bold">Our application</p>
+                <p class="text-3xl sm:text-4xl font-bold">simple way to <br> order your food</p>
+            </div>
+
+            <div>
+                <p class="text-sm text-gray-600">Discover food wherever and whenever <br>and get your food delivery
+                    quickly </p>
+            </div>
+
+            <div><button class=" text-white font-bold py-1.5 px-3 rounded-[10px] bg-[#2e7d32]">Get the App</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- subscribe wala page -->
+
+    <div class="h-[60vh] sm:h-[80vh] flex flex-col justify-center space-y-9 items-center">
+        <div class="font-bold flex flex-col justify-center items-center">
+            <p class="text-[#2e7d32]">OUR SUBSCRIBE</p>
+            <P class="text-4xl text-center">Subscribe TO Our Newsletter</P>
+        </div>
+
+        <div class="flex justify-center">
+           <p class="text-center text-gray-500">We recommend you to subscribe our newspaper, drop your email <br>below to get daily update about us.</p>
+        </div>
+
+        <div class="w-[350px] h-[50px] bg-white rounded-[10px] border-none outline-none px-2">
+            <input type="text" class="h-[100%] px-1.5 p w-[70%] border-none outline-none focus:outline-none" placeholder="Enter your email address">
+            <button class="cursor-pointer bg-[#2e7d32] text-white font-bold w-[25%] h-[80%] rounded-[10px]">Subscribe</button>
+        </div>
+
+    </div>
+
+
+<!-- this  is footer  -->
+<div class="w-full flex flex-wrap gap-8 min-h-[30vh] p-6 bg-[#f6f5f3] text-gray-700">
+
+  <div class="w-full sm:w-[45%] md:w-[22%] space-y-4">
+    <p class="font-bold text-xl text-[#2e7d32]">FoodHub</p>
+
+    <p class="text-sm leading-relaxed">
+      We will fill your tummy with delicious food with fast delivery.
+    </p>
+
+    <div class="flex gap-3">
+      <p class="p-2 bg-[#a6efac] rounded-full cursor-pointer hover:bg-[#7aba7d] transition">
+        <i class="fa-brands fa-x-twitter"></i>
+      </p>
+      <p class="p-2 bg-[#a6efac] rounded-full cursor-pointer hover:bg-[#7aba7d] transition">
+        <i class="fa-brands fa-instagram"></i>
+      </p>
+      <p class="p-2 bg-[#a6efac] rounded-full cursor-pointer hover:bg-[#7aba7d] transition">
+        <i class="fa-brands fa-facebook-f"></i>
+      </p>
+      <p class="p-2 bg-[#a6efac] rounded-full cursor-pointer hover:bg-[#7aba7d] transition">
+        <i class="fa-brands fa-google-plus-g"></i>
+      </p>
+    </div>
+  </div>
+
+  <div class="w-full sm:w-[45%] md:w-[22%] space-y-3">
+    <p class="font-bold text-lg text-black">Our Menu</p>
+    <ol class="space-y-2 text-sm">
+      <li class="hover:text-[#2e7d32] cursor-pointer">Special</li>
+      <li class="hover:text-[#2e7d32] cursor-pointer">Popular</li>
+      <li class="hover:text-[#2e7d32] cursor-pointer">Categories</li>
+    </ol>
+  </div>
+
+  <div class="w-full sm:w-[45%] md:w-[22%] space-y-3">
+    <p class="font-bold text-lg text-black">Company</p>
+    <ol class="space-y-2 text-sm">
+      <li class="hover:text-[#2e7d32] cursor-pointer">Why Foodie</li>
+      <li class="hover:text-[#2e7d32] cursor-pointer">Partner with us</li>
+      <li class="hover:text-[#2e7d32] cursor-pointer">About us</li>
+      <li class="hover:text-[#2e7d32] cursor-pointer">FAQ's</li>
+    </ol>
+  </div>
+
+  <div class="w-full sm:w-[45%] md:w-[22%] space-y-3">
+    <p class="font-bold text-lg text-black">Support</p>
+    <ol class="space-y-2 text-sm">
+      <li class="hover:text-[#2e7d32] cursor-pointer">Account</li>
+      <li class="hover:text-[#2e7d32] cursor-pointer">Support Center</li>
+      <li class="hover:text-[#2e7d32] cursor-pointer">Feedback</li>
+      <li class="hover:text-[#2e7d32] cursor-pointer">Contacts</li>
+    </ol>
+  </div>
+
+</div>
+
+      <!-- this section is for cart -->
+ <div id="cart_add" class=" flex flex-col rounded-2xl justify-between h-[100vh] px-6 bg-[#ddf3c9] w-[400px] fixed top-0 right-[-400px] transition-all duration-[1s]">
+
+
+  <div class="flex justify-between px-[10px]">
+    <p class="text-[#2e7d32] py-3.5 font-bold">Food Hub</p>
+  </div>
+
+
+ <div id="cart_items" class="flex-1 w-[95%] border overflow-y-auto space-y-2 px-2.5 py-2 "></div>
+
+
+  <div class="h-[20%]  flex flex-col space-y-2">
+    <div class="w-full flex justify-center items-center h-[40px]">
+      <p>Total Price $ <span id="total" class="font-bold">00</span></p>
+    </div>
+
+    <div class="w-full flex justify-center space-x-2.5">
+      <button id="cart-close" class="bg-black text-white font-bold py-1.5 px-3 rounded-[10px] cursor-pointer">Close</button>
+      <button class="bg-black text-white font-bold py-1.5 px-3 rounded-[10px] cursor-pointer">Check Out</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+    <script src="script.js"></script>
+   
+</body>
+
+</html>
