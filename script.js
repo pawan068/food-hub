@@ -44,29 +44,102 @@ fetch("menu.json")
     const container = document.getElementById("menuContainer");
 
     container.innerHTML = data.map(item => `
-      <div class="max-w-62.5 h-87.5 font-bold rounded-3xl space-y-2.5 bg-white border
-                  flex flex-col items-center justify-center py-3">
+    
+    <div class="group relative overflow-hidden rounded-[28px] bg-white border border-red-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
 
-        <div class="w-7/10">
-          <img src="${item.image}" alt="${item.name}">
-        </div>
+        <!-- Badge -->
 
-        <p class="text-2xl text-center">${item.name}</p>
-        <p class="text-2xl text-[#2e7d32]">$${item.price}</p>
+        <span class="absolute top-4 left-4 z-20 bg-gradient-to-r from-red-600 to-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            Bestseller
+        </span>
 
-        <button  
-          data-name="${item.name}"
-          data-price="${item.price}"
-          data-image="${item.image}"
-          class="addcart bg-[#2e7d32] hover:bg-[#58ab5c] text-white rounded px-3 py-1.5 text-sm cursor-pointer">
-          Add to Cart
+        <!-- Wishlist -->
+
+        <button class="absolute top-4 right-4 z-20 h-10 w-10 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition">
+            <i class="fa-regular fa-heart"></i>
         </button>
 
-      </div>
+        <!-- Image -->
+
+        <div class="bg-[#fff8f6] overflow-hidden">
+
+            <img src="${item.image}"
+                 alt="${item.name}"
+                 class="h-56 w-full object-contain p-6 group-hover:scale-110 transition duration-700">
+
+        </div>
+
+        <!-- Content -->
+
+        <div class="p-6">
+
+            <div class="flex justify-between items-center">
+
+                <h2 class="text-xl font-bold text-gray-800">
+                    ${item.name}
+                </h2>
+
+                <span class="text-2xl font-black text-red-600">
+                    $${item.price}
+                </span>
+
+            </div>
+
+            <!-- Rating -->
+
+            <div class="flex items-center gap-1 mt-3">
+
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+
+                <span class="text-sm text-gray-500 ml-2">
+                    (4.9)
+                </span>
+
+            </div>
+
+            <!-- Description -->
+
+            <p class="text-sm text-gray-500 leading-6 mt-4">
+                Freshly prepared using premium ingredients with rich taste and quick delivery.
+            </p>
+
+            <!-- Bottom -->
+
+            <div class="flex items-center justify-between mt-6">
+
+                <div class="text-sm text-gray-500">
+
+                    <i class="fa-solid fa-clock text-red-500 mr-1"></i>
+
+                    20-25 min
+
+                </div>
+
+                <button
+                    data-name="${item.name}"
+                    data-price="${item.price}"
+                    data-image="${item.image}"
+                    class="addcart rounded-full bg-gradient-to-r from-red-600 to-orange-500 px-5 py-3 text-white font-semibold shadow-lg hover:scale-105 transition">
+
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+
+                    Add
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
     `).join("");
 
-  });
-
+});
 
 // adding items in cart
 let cartadded= document.getElementById("cartadded")
